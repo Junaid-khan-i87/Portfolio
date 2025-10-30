@@ -7,6 +7,7 @@ import MailIcon from '../components/icons/MailIcon';
 import CheckCircleIcon from '../components/icons/CheckCircleIcon';
 import MapPinIcon from '../components/icons/MapPinIcon';
 import PhoneIcon from '../components/icons/PhoneIcon';
+import supabase from '../utils/supabaseClient';
 
 const ContactPage: React.FC = () => {
     const [name, setName] = useState('');
@@ -17,11 +18,13 @@ const ContactPage: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setSubmissionStatus('sending');
-        
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // In a real app, you would handle API errors here and set status to 'error'
+        const { error } = await supabase
+            .from('contacts')
+            .insert([{ name, email, message }]);
+        if (error) {
+            setSubmissionStatus('error');
+            return;
+        }
         setSubmissionStatus('success');
 
         setTimeout(() => {
