@@ -73,7 +73,7 @@ const ContactPage: React.FC = () => {
                             </div>
                             <div>
                                 <h3 className="font-semibold text-slate-800 dark:text-slate-200">Our Office</h3>
-                                <p className="text-slate-600 dark:text-slate-400">123 Creative Lane, Dev City, Pakistan</p>
+                                <p className="text-slate-600 dark:text-slate-400">Currently In progress, Pakistan</p>
                             </div>
                         </li>
                         <li className="flex items-start gap-4">
@@ -93,7 +93,7 @@ const ContactPage: React.FC = () => {
                             </div>
                             <div>
                                 <h3 className="font-semibold text-slate-800 dark:text-slate-200">Call Us</h3>
-                                <p className="text-slate-600 dark:text-slate-400">+92 300 1234567</p>
+                                <p className="text-slate-600 dark:text-slate-400">+92 335 5881639</p>
                             </div>
                         </li>
                     </ul>

@@ -74,5 +74,5 @@ export const SKILLS: SkillCategory[] = [
 export const SOCIAL_LINKS = {
   github: 'https://github.com',
   linkedin: 'https://linkedin.com',
-  email: 'mailto:hello.junaid@example.com',
+  email: 'mailto:junaidmushtaq988@gmail.com',
 };
