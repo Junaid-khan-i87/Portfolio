@@ -111,7 +111,7 @@ const AboutPage: React.FC = () => {
                     style={{ y: imageY }}
                 >
                     <img 
-                        src="\images\junaid-profile.jpg" 
+                        src="/images/junaid-profile.jpg" 
                         alt="About me" 
                         className="rounded-2xl shadow-2xl object-cover w-full h-full"
                         loading="lazy"

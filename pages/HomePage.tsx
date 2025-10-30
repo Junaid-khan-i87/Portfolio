@@ -210,7 +210,7 @@ const HomePage: React.FC = () => {
       >
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="relative">
-                <img src="\images\junaid-profile.jpg" alt="JUNAID" className="rounded-2xl shadow-2xl object-cover w-full h-auto" loading="lazy" decoding="async" />
+                <img src="/images/junaid-profile.jpg" alt="JUNAID" className="rounded-2xl shadow-2xl object-cover w-full h-auto" loading="lazy" decoding="async" />
             </motion.div>
             <motion.div variants={itemVariants}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-teal-500 dark:from-violet-400 dark:to-teal-400">A Little About Me</h2>
