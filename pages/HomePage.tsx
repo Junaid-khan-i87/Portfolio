@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 // FIX: Import AnimatePresence to resolve 'Cannot find name' error.
 import { motion, Variants, SVGMotionProps, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ import PostgresqlIcon from '../components/icons/tech/PostgresqlIcon';
 import ReactIcon from '../components/icons/tech/ReactIcon';
 import TailwindCssIcon from '../components/icons/tech/TailwindCssIcon';
 import TypeScriptIcon from '../components/icons/tech/TypeScriptIcon';
-import GithubContributionGraph from '../components/GithubContributionGraph';
+ const LazyGithubContributionGraph = lazy(() => import('../components/GithubContributionGraph'));
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -210,7 +210,7 @@ const HomePage: React.FC = () => {
       >
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="relative">
-                <img src="https://i.imgur.com/71225L0.jpeg" alt="JUNAID" className="rounded-2xl shadow-2xl object-cover w-full h-auto" loading="lazy" decoding="async" />
+                <img src="/images/WhatsApp Image 2025-10-30 at 19.50.59_c3abc285.jpg" alt="JUNAID" className="rounded-2xl shadow-2xl object-cover w-full h-auto" loading="lazy" decoding="async" />
             </motion.div>
             <motion.div variants={itemVariants}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-teal-500 dark:from-violet-400 dark:to-teal-400">A Little About Me</h2>
@@ -281,7 +281,13 @@ const HomePage: React.FC = () => {
             1,300+ Contributions Last Year
         </motion.h2>
         <motion.div variants={itemVariants}>
-            <GithubContributionGraph />
+            <Suspense
+              fallback={
+                <div className="w-full h-48 rounded-xl bg-gradient-to-r from-slate-200 to-slate-100 dark:from-slate-800 dark:to-slate-900 animate-pulse" />
+              }
+            >
+              <LazyGithubContributionGraph />
+            </Suspense>
         </motion.div>
       </motion.section>
 

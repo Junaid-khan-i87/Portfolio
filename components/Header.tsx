@@ -110,7 +110,7 @@ const Header: React.FC = () => {
                                     to="/contact"
                                     className="bg-gradient-to-r from-violet-600 to-teal-600 hover:from-violet-700 hover:to-teal-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 shadow-lg shadow-violet-500/30"
                                 >
-                                    Contact
+                                    Contact Us
                                 </NavLink>
                             </motion.div>
                         </div>
