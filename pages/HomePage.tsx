@@ -437,7 +437,7 @@ const HomePage: React.FC = () => {
             </Link>
             </motion.div>
         </motion.div>
-        </section>
+        </motion.section>
     </div>
   );
 };
