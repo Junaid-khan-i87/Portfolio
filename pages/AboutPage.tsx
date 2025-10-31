@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 // FIX: Import `Variants` from `framer-motion` to correctly type animation variants.
 import { motion, useScroll, useTransform, Variants } from 'framer-motion';
-import profileImage from '../images/junaid-profile.jpg';
+// Using Vite's public directory for static assets
+const profileImage = '/images/junaid-profile.jpg';
 import { Link } from 'react-router-dom';
 import { SKILLS } from '../constants';
 import SkillBadge from '../components/SkillBadge';
