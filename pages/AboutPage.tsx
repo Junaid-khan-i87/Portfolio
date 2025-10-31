@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 // FIX: Import `Variants` from `framer-motion` to correctly type animation variants.
 import { motion, useScroll, useTransform, Variants } from 'framer-motion';
+import profileImage from '../images/junaid-profile.jpg';
 import { Link } from 'react-router-dom';
 import { SKILLS } from '../constants';
 import SkillBadge from '../components/SkillBadge';
@@ -111,7 +112,7 @@ const AboutPage: React.FC = () => {
                     style={{ y: imageY }}
                 >
                     <img 
-                        src="/images/junaid-profile.jpg" 
+                        src={profileImage} 
                         alt="About me" 
                         className="rounded-2xl shadow-2xl object-cover w-full h-full"
                         loading="lazy"
